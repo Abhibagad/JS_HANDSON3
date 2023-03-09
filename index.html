@@ -7,7 +7,7 @@
     <title>Iteration</title>
 </head>
 <body>
-    <h1>ITERATION</h1>
+     <h1>ITERATION</h1>
     <h2>Q1.Find the number of digits</h2>
     <pre>
         const Find_Digits = (N) => 
@@ -25,15 +25,17 @@
     <pre>
         const Find_Five = (N) => 
     {
-        let ans =0;
-        while(N>0){
-        if(N%10 === 5){
-        ans++;
-        N = N/10;
-        }
+         let ans =0;
+           while(N!==0){
+           let check=N%10;
+           if(check ===5){
+           ans++;
+          }
+      N=Math.floor(N/10);
     }
-        return ans;
-     };
+  return ans;
+};
+    
     </pre>
     <hr>
     <h2>Q3.Find Sum</h2>
@@ -75,7 +77,22 @@
      };
     </pre>
     <hr>
-    <h2>Q6.Check whether a Number is a prime or not.</h2>
+    <h2>Q6.Print the Pattern.</h2>
+    <pre>
+      const Print_pattern = (N) => 
+      {
+         let string="";
+          for(let row=1;row<=N;row++){
+          for(let col=1;col<=row;col++){
+        string += "*";
+      }
+        string += "\n"; 
+      }
+         console.log(string);
+      };
+    </pre>
+    <hr>
+    <h2>Q7.Check whether a Number is a prime or not.</h2>
     <pre>
         const Prime_Check = (N) => 
         {
@@ -97,18 +114,20 @@
         
         </pre>
         <hr>
-        <h2>Q7.Print Numbers</h2>
+        <h2>Q8.Print Numbers</h2>
         <pre>
             const printNumbers = (n) => {
+             let string="";
                for(i=1;i<=n;i++){
-                 console.log(i);
-               }
+              string+= i+" "
+            }
+              console.log(string);
                 
             };
             
             </pre>
             <hr>
-            <h2>Q8.Print the Table</h2>
+            <h2>Q9.Print the Table</h2>
             <pre>
                 const Print_Table = (N) => 
             {
